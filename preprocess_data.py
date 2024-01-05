@@ -77,6 +77,7 @@ def create_chart_table(data):
     sort_chart = chart.sort_values(by=['in_spotify_charts', 'in_apple_charts', 'in_deezer_charts', 'in_shazam_charts'], ascending=False)
     chart_id = [idx for idx, _ in enumerate(chart.loc[:, ('track_id')])]
     sort_chart.insert(0, 'chart_id', chart_id)
+    sort_chart = sort_chart.rename(columns={"track_id":"track"})
     sort_chart.to_csv('charts.csv',index=False) # write charts to csv
     
 def create_playlist_table(data):
@@ -86,6 +87,7 @@ def create_playlist_table(data):
     sort_playlist = playlist.sort_values(by=['in_spotify_playlists', 'in_apple_playlists', 'in_deezer_playlists'], ascending=False)
     playlist_id = [idx for idx, _ in enumerate(playlist.loc[:, ('track_id')])]
     sort_playlist.insert(0, 'playlist_id', playlist_id)
+    sort_playlist = sort_playlist.rename(columns={"track_id":"track"})
     sort_playlist.to_csv('playlists.csv',index=False) # write playlists to csv
     
 if __name__ == "__main__":

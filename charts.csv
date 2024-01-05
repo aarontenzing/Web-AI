@@ -1,4 +1,4 @@
-chart_id,track_id,in_spotify_charts,in_apple_charts,in_deezer_charts,in_shazam_charts
+chart_id,track,in_spotify_charts,in_apple_charts,in_deezer_charts,in_shazam_charts
 0,0,147.0,263.0,10.0,826
 1,12,115.0,215.0,58.0,1021
 2,2,113.0,207.0,14.0,949

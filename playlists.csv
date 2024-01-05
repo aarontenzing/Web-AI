@@ -1,4 +1,4 @@
-playlist_id,track_id,in_spotify_playlists,in_apple_playlists,in_deezer_playlists
+playlist_id,track,in_spotify_playlists,in_apple_playlists,in_deezer_playlists
 0,753,52898.0,203.0,8215
 1,626,51979.0,306.0,5063
 2,716,50887.0,315.0,6284
