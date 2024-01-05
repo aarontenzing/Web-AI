@@ -1,0 +1,833 @@
+artist_id,artist_name
+0,Latto
+1,Jung Kook
+2,Myke Towers
+3,Olivia Rodrigo
+4,Taylor Swift
+5,Bad Bunny
+6,Dave
+7,Central Cee
+8,Eslabon Armado
+9,Peso Pluma
+10,Quevedo
+11,Gunna
+12,Yng Lvcas
+13,Grupo Frontera
+14,NewJeans
+15,Miley Cyrus
+16,David Kushner
+17,Harry Styles
+18,SZA
+19,Fifty Fifty
+20,Billie Eilish
+21,Feid
+22,Young Miko
+23,Jimin
+24,Gabito Ballesteros
+25,Junior H
+26,Arctic Monkeys
+27,Bizarrap
+28,The Weeknd
+29,Madonna
+30,Playboi Carti
+31,Fuerza Regida
+32,Rï¿½ï¿½ma
+33,Selena G
+34,Tainy
+35,Morgan Wallen
+36,Dua Lipa
+37,Troye Sivan
+38,21 Savage
+39,Metro Boomin
+40,Karol G
+41,Shakira
+42,Big One
+43,Duki
+44,Lit Killah
+45,Maria Becerra
+46,FMK
+47,Rusherking
+48,Emilia
+49,Tiago pzk
+50,Yahritza Y Su Esencia
+51,Post Malone
+52,Swae Lee
+53,Bebe Rexha
+54,David Guetta
+55,Tyler
+56,The Creator
+57,Kali Uchis
+58,Nicki Minaj
+59,Aqua
+60,Ice Spice
+61,OneRepublic
+62,Daft Punk
+63,Ariana Grande
+64,Sky Rompiendo
+65,Anne-Marie
+66,Coi Leray
+67,Peggy Gou
+68,Tom Odell
+69,Manuel Turizo
+70,dennis
+71,MC Kevin o Chris
+72,PinkPantheress
+73,Charlie Puth
+74,BTS
+75,Rauw Alejandro
+76,ROSALï¿½
+77,Ozuna
+78,Chris Molitor
+79,Libianca
+80,Glass Animals
+81,JVKE
+82,The Neighbourhood
+83,Coldplay
+84,d4vd
+85,Sam Smith
+86,Kim Petras
+87,Yandel
+88,Vance Joy
+89,Em Beihold
+90,Stephen Sanchez
+91,Mc Livinho
+92,DJ Matt D
+93,Justin Bieber
+94,The Kid Laroi
+95,Marshmello
+96,Lewis Capaldi
+97,Chencho Corleone
+98,Jain
+99,Ayparia
+100,unxbected
+101,Luke Combs
+102,Doechii
+103,Eladio Carrion
+104,J. Cole
+105,Lil Durk
+106,Lana Del Rey
+107,Future
+108,Don Toliver
+109,Eminem
+110,Carin Leon
+111,Elton John
+112,Pnau
+113,Ruth B.
+114,Imagine Dragons
+115,Adele
+116,Kendrick Lamar
+117,Jay Rock
+118,Anggi Marito
+119,Jasiel Nuï¿½ï¿½ez
+120,Peso P
+121,Tears For Fears
+122,Loreen
+123,Taiu
+124,Milo j
+125,Sebastian Yatra
+126,Beï¿½ï
+127,Calvin Harris
+128,Ellie Goulding
+129,Sabrina Carpenter
+130,Ray Dalton
+131,Ryan Lewis
+132,Macklemore
+133,Khalid
+134,(G)I-DLE
+135,A Boogie Wit da Hoodie
+136,NAV
+137,Travis Scott
+138,Young Thug
+139,Sachin-Jigar
+140,Shadab Faridi
+141,Altamash Faridi
+142,Amitabh Bhattacharya
+143,Varun Jain
+144,Ed Sheeran
+145,Veigh
+146,Bvga Beatz
+147,Supernova Ent
+148,Prod Malax
+149,Mc Pedrinho
+150,DJ 900
+151,Sog
+152,Ryan Castro
+153,Bomba Estï¿½ï¿½reo
+154,Bad B
+155,Keane
+156,New West
+157,Chino Pacas
+158,Natanael Cano
+159,Don Omar
+160,Lucenzo
+161,Ana Castela
+162,AgroPlay
+163,Bruno Mars
+164,Ke personajes
+165,Drake
+166,Chris Brown
+167,Daddy Yankee
+168,WizKid
+169,Kyla
+170,Miguel
+171,The Police
+172,Lord Huron
+173,Rihanna
+174,Alec Benjamin
+175,A$AP Rocky
+176,Roisee
+177,YOASOBI
+178,Rosa Linn
+179,One Direction
+180,Oscar Maydon
+181,Radiohead
+182,James Arthur
+183,Cigarettes After Sex
+184,Shubh
+185,Frank Ocean
+186,Hozier
+187,Hotel Ugly
+188,Creedence Clearwater Revival
+189,Plan B
+190,Mora
+191,Saiko
+192,a-ha
+193,Lil Wayne
+194,Offset
+195,Kodak Black
+196,NLE Choppa
+197,Muni Long
+198,Arijit Singh
+199,Amitabha Bhattacharya
+200,Stray Kids
+201,Becky G
+202,Kaliii
+203,Eden Muï¿½ï
+204,Abhijay Sharma
+205,Riar Saab
+206,Semicenk
+207,Doï¿½ï¿½u 
+208,JISOO
+209,Lil Uzi Vert
+210,RAYE
+211,070 Shake
+212,Arcangel
+213,BLESSD
+214,ENHYPEN
+215,James Blake
+216,Israel & Rodolffo
+217,Mari Fernandez
+218,Steve Lacy
+219,Beyoncï¿
+220,Halsey
+221,Suga
+222,Nicky Jam
+223,Sean Paul
+224,Toian
+225,Beam
+226,Simone Mendes
+227,Tini
+228,Sia
+229,MC Caverinha
+230,KayBlack
+231,JID
+232,Zï¿½ï¿½ Neto & Crist
+233,Migrantes
+234,LiL CaKe
+235,Nico Valdi
+236,Tory Lanez
+237,Joji
+238,Mambo Kingz
+239,DJ Luian
+240,Anuel Aa
+241,Nile Rodgers
+242,LE SSERAFIM
+243,Agust D
+244,Rich The Kid
+245,Matuï¿
+246,Labrinth
+247,Romeo Santos
+248,Lizzy McAlpine
+249,IVE
+250,sped up 8282
+251,Cartel De Santa
+252,La Kelly
+253,SEVENTEEN
+254,Grupo Marca Registrada
+255,TAEYANG
+256,Lisa
+257,Raim Laode
+258,Meghan Trainor
+259,sped up nightcore
+260,ARIZONATEARS
+261,TV Girl
+262,INTERWORLD
+263,Jhayco
+264,El Chachito
+265,Gesaffelstein
+266,RM
+267,Colde
+268,BLACKPINK
+269,Nengo Flow
+270,Nicky Youre
+271,Dazy
+272,Dina Rae
+273,IU
+274,Tiï¿½ï¿½sto
+275,Tate M
+276,NF
+277,Kanii
+278,PR1ISVX
+279,Marï¿½ï¿½lia Mendo
+280,Zach Bryan
+281,Melanie Martinez
+282,Mae Stephens
+283,Kenia OS
+284,Kordhell
+285,Coolio
+286,L.V.
+287,Ovy On The Drums
+288,The Walters
+289,Mac DeMarco
+290,Jack Black
+291,NICKI NICOLE
+292,Cris Mj
+293,Standly
+294,Stars Music Chile
+295,Brray
+296,Lyanno
+297,Linkin Park
+298,Gorillaz
+299,j-hope
+300,Robin Schulz
+301,Oliver Tree
+302,Niall Horan
+303,Mahalini
+304,ThxSoMch
+305,Eric Church
+306,Kaifi Khalil
+307,Lady Gaga
+308,Leo Santana
+309,Treyce
+310,Doja Cat
+311,MC Xenon
+312,Os Gemeos da Putaria
+313,League of Legends
+314,Arcane
+315,XXXTENTACION
+316,J Balvin
+317,Yuridia
+318,Angela Aguilar
+319,Lizzo
+320,Fujii Kaze
+321,Wisin & Yandel
+322,King
+323,Jessie Reyez
+324,P!nk
+325,Lil Nas X
+326,Beach Weather
+327,Baby Tate
+328,Rï¿½ï
+329,Vishal Dadlani
+330,Sukriti Kakar
+331,Vishal-Shekhar
+332,Shekhar Ravjiani
+333,Kumaar
+334,Beach House
+335,FIFA Sound
+336,Steve Aoki
+337,La Joaqui
+338,Conan Gray
+339,Shilpa Rao
+340,Caralisa Monteiro
+341,TOMORROW X TOGETHER
+342,Tems
+343,Mr.Kitty
+344,Gustavo Mioto
+345,Jack Harlow
+346,Elley Duhï¿
+347,Seafret
+348,Baby Rasta
+349,DJ Escobar
+350,MC MENOR SG
+351,MC MENOR HR
+352,Dean Lewis
+353,Bellakath
+354,Skrillex
+355,Flowdan
+356,Fred again..
+357,Kate Bush
+358,Aerosmith
+359,Freddie Dredd
+360,Lost Frequencies
+361,Calum Scott
+362,Twisted
+363,Kenshi Yonezu
+364,Omar Apollo
+365,DaBaby
+366,James Hype
+367,Miggy Dela Rosa
+368,Pritam
+369,Styrx
+370,utku INC
+371,Thezth
+372,Maroon 5
+373,Wiz Khalifa
+374,Mariah Carey
+375,Wham!
+376,Brenda Lee
+377,Bobby Helms
+378,Michael Bublï¿
+379,Andy Williams
+380,Dean Martin
+381,Kelly Clarkson
+382,Josï¿½ï¿½ Felic
+383,The Ronettes
+384,John Lennon
+385,The Harlem Community Choir
+386,The Plastic Ono Band
+387,Yoko Ono
+388,Burl Ives
+389,Nat King Cole
+390,Paul McCartney
+391,Band Aid
+392,Phoebe Bridgers
+393,Shakin' Stevens
+394,Frank Sinatra
+395,B. Swanson Quartet
+396,Bing Crosby
+397,John Scott Trotter & His Orchestra
+398,Ken Darby Singers
+399,Chris Rea
+400,Darlene Love
+401,Perry Como
+402,The Fontane Sisters
+403,Mitchell Ayres & His Orchestra
+404,Britney Spears
+405,Mabel Matiz
+406,Mert Demir
+407,Dj LK da Escï¿½ï¿½cia
+408,Tchakabum
+409,mc jhenny
+410,M
+411,Jhay Cortez
+412,Gwen Stefani
+413,Blake Shelton
+414,Chuck Berry
+415,John Legend
+416,Maldy
+417,Gayle
+418,Lauren Spencer Smith
+419,Cherish
+420,ACRAZE
+421,Adassa
+422,Mauro Castillo
+423,Stephanie Beatriz
+424,Encanto - Cast
+425,Rhenzy Feliz
+426,Diane Guerrero
+427,Carolina Gaitan
+428,Farruko
+429,Jaymes Young
+430,Ckay
+431,Jessica Darrow
+432,Mï¿½ï¿½ne
+433,Aitana
+434,zzoilo
+435,Julieta Venegas
+436,Ava
+437,Swedish House Mafia
+438,Juan Cruz Toledo
+439,Huilen Toledo
+440,BoyWithUke
+441,Xamï¿½ï¿½
+442,Gustah
+443,Neo B
+444,Emmy Meli
+445,Justin Quiles
+446,Lenny Tavï¿½ï¿½rez
+447,BL
+448,Shawn Mendes
+449,Aventura
+450,AX'EL
+451,Dj Yo!
+452,Anderson .Paak
+453,Silk Sonic
+454,THE ANXIETY
+455,Willow
+456,Tyler Cole
+457,Daniel Caesar
+458,Giveon
+459,Stromae
+460,Rvssian
+461,NEIKED
+462,Mae Muller
+463,Polo G
+464,Amaarae
+465,Moliy
+466,Jnr Choi
+467,Trueno
+468,Sech
+469,Project Pat
+470,Kar
+471,Edison Lighthouse
+472,Olga Merediz
+473,Surf Curse
+474,Jason Derulo
+475,24kgoldn
+476,Iann Dior
+477,Kanye West
+478,Maluma
+479,Fireboy DML
+480,Prezioso
+481,Gabry Ponte
+482,LUM!X
+483,Tiï¿½ï¿
+484,Marï¿½ï¿½lia Mendonï¿½ï¿½a
+485,George Henrique &
+486,TWICE
+487,Charli XCX
+488,Jax Jones
+489,Joel Corry
+490,Saweetie
+491,SALES
+492,Sleepy hallow
+493,Masked Wolf
+494,NIKI
+495,Tate McRae
+496,Avicii
+497,Tones and I
+498,Juice WRLD
+499,Nirvana
+500,Duncan Laurence
+501,L-Gante
+502,SiM
+503,Baby Keem
+504,The Killers
+505,Nio Garcia
+506,Bradley Cooper
+507,Jonas Brothers
+508,Riton
+509,Nightcrawlers
+510,Mufasa & Hypeman
+511,Dopamine
+512,Nate Dogg
+513,De La Ghetto
+514,Dalex
+515,Dimelo Flow
+516,Rich Music
+517,Lil Baby
+518,Katy Perry
+519,Alesso
+520,Maiara &
+521,Dr. Dre
+522,Snoop Dogg
+523,Dove Cameron
+524,Alicia Keys
+525,Fivio Foreign
+526,Mahmood
+527,Blanco
+528,50 Cent
+529,Yung Lean
+530,Zendaya
+531,The Rare Occasions
+532,Intense
+533,AP Dhillon
+534,Gurinder Gill
+535,La Pantera
+536,Juseph
+537,Cruz Cafunï¿½ï¿½
+538,Bï¿½ï¿½jo
+539,Abhir Hathi
+540,2Pac
+541,Roger
+542,Luude
+543,Colin Hay
+544,Dido
+545,GODZZ__-
+546,Zakaria
+547,Chase Atlantic
+548,Mainstreet
+549,Chefin
+550,Alvaro Diaz
+551,Zï¿½ï¿½ Fe
+552,Vundabar
+553,V
+554,Hugo & G
+555,Camila Cabello
+556,Megan Thee Stallion
+557,Anitta
+558,Tulus
+559,Pedro Sampaio
+560,Zion & Lennox
+561,Residente
+562,Treasure
+563,Christian Nodal
+564,Kevin Gates
+565,Juicy J
+566,Tyga
+567,Queen
+568,YEAT
+569,C. Tangana
+570,The Chainsmokers
+571,NMIXX
+572,Gotye
+573,Kimbra
+574,AnnenMayKantereit
+575,Giant Rooks
+576,Paulo Londra
+577,Danny Ocean
+578,Lil Tjay
+579,Alejo
+580,Robi
+581,Demi Lovato
+582,Matuï¿½ï¿½
+583,Wiu
+584,
+585,Ak4:20
+586,Pailita
+587,Luï¿½ï¿½sa Sonza
+588,MC Frog
+589,Dj Gabriel do Borel
+590,Davi K
+591,teto
+592,Blackbear
+593,Pharrell Williams
+594,Jordan Fisher
+595,Josh Levi
+596,Finneas O'Connell
+597,4*TOWN (From Disney and Pixarï¿½ï¿½ï¿½s Turning Red)
+598,Topher Ngo
+599,Grayson Vill
+600,BIGBANG
+601,Blxst
+602,Amanda Reifer
+603,Sampha
+604,Roddy Ricch
+605,Tony Dize
+606,Buscabulla
+607,Taylour Paige
+608,Sam Dew
+609,The Marï¿½ï
+610,Ghostface Killah
+611,Summer Walker
+612,Polima WestCoast
+613,Panic! At The Disco
+614,Tanna Leone
+615,PSY
+616,Benson Boone
+617,KALUSH
+618,Luciano
+619,Shae Gill
+620,Ali Sethi
+621,Beth Gibbons
+622,MNEK
+623,Ugly Dray
+624,Tesla Jnr
+625,Jessi
+626,Chanel
+627,Leah Kate
+628,Sam Ryder
+629,HA SUNG WOON
+630,The Goo Goo Dolls
+631,Kevin Kaarl
+632,Suki Waterhouse
+633,Chris Jedi
+634,Musical Youth
+635,Villano Antillano
+636,BYOR
+637,Imanbek
+638,347aidan
+639,Paloma Faith
+640,Childish Gambino
+641,Ella Henderson
+642,Becky Hill
+643,Sidhu Moose Wala
+644,Keisya Levronka
+645,Victor Cibrian
+646,Metallica
+647,Paloma Mami
+648,Yung Gravy
+649,Lasso
+650,Nayeon
+651,Schï¿½ï¿½rze
+652,DJ R
+653,Guns N' Roses
+654,Burna Boy
+655,Cardi B
+656,L7nnon
+657,DJ Biel do Furduncinho
+658,Bianca
+659,Nessa Barrett
+660,LF System
+661,Mc Vitin Da Igrejinha
+662,MC Tairon
+663,DJ Win
+664,Rels B
+665,Benny Blanco
+666,DJ Khaled
+667,Luar La L
+668,Ghost
+669,Rex Orange County
+670,Sofia Carson
+671,Justin Timberlake
+672,Luis R Conriquez
+673,La Adictiva
+674,Black Eyed Peas
+675,Melody
+676,Dj Chris No Beat
+677,Interplanetary Criminal
+678,Eliza Rose
+679,Armani White
+680,Oxlade
+681,PnB Rock
+682,Lil Yachty
+683,Fran C
+684,Nickoog Clk
+685,Pablito Pesadilla
+686,Southstar
+687,girl in red
+688,Rosa Walton
+689,Hallie Coggins
+690,Aitch
+691,Bï¿½
+692,MC Ryan SP
+693,Love Funk
+694,Mc Paiva ZS
+695,Ludwig Goransson
+696,Foudeqush
+697,Jin
+698,Selena Gomez
+699,The Kid LAROI
+700,LF SYSTEM
+701,GAYLE
+702,Jena Rose
+703,Elley DuhÃ©
+704,Jt5k
+705,Disco Lines
+706,KillBunk
+707,Arman Aydin
+708,Kreepa
+709,Astelle
+710,YES YES
+711,XY&O
+712,P.S.
+713,Viva La Panda
+714,Paradigm
+715,Taylor Watson
+716,HotBlock Jmoe
+717,John De Sohn
+718,Alex Alexander
+719,SofÃ­a Reyes
+720,Kinrose
+721,CKay
+722,Farux
+723,Girll Codee
+724,Monaldin
+725,Matvey Emerson
+726,Shab
+727,VINAI
+728,Thatsimo
+729,Bella Poarch
+730,loafers
+731,JAM & Philly
+732,Duke & Jones
+733,MISERO
+734,Alex D'Rosso
+735,Trinidad Cardona
+736,Nippandab
+737,Asketa & Natan Chaim
+738,bbno$
+739,Coopex
+740,Goya Menor
+741,Why Not
+742,Dame Dame
+743,Dirty Heads
+744,Lucas Estrada
+745,Harddope
+746,MÃ¥neskin
+747,Jungle Jonsson
+748,Nito-Onna
+749,Tesher
+750,MÃRFI
+751,Naeleck
+752,Erica Banks
+753,Amero
+754,Glamii
+755,PadÃ©
+756,TiÃ«sto
+757,DLAY
+758,LISA
+759,Timemachine
+760,Madism
+761,CAZZETTE
+762,Nathan Evans
+763,Reyanna Maria
+764,SoulChef
+765,HOURS
+766,VANO 3000
+767,Xilo
+768,Kayla Nicole
+769,Michael Shynes
+770,Senhit
+771,CJ
+772,BÃRNS
+773,Bee Gees
+774,24kGoldn
+775,Internet Money
+776,Kauai45
+777,Ana Shine
+778,Gym Class Heroes
+779,Nadia Gattas
+780,Brent Faiyaz
+781,Yusuf Alev
+782,sad girls
+783,Pop Smoke
+784,Jawsh 685
+785,blackbear
+786,S1mba
+787,Ritt Momney
+788,Nander
+789,Braaheim
+790,Claire Rosinkranz
+791,ROSALÃA
+792,Baby Bluu
+793,Andrew Nagy
+794,WILLOW
+795,Conkarah
+796,Myrrhe
+797,Quavo
+798,StaySolidRocky
+799,CPX
+800,Young T & Bugsey
+801,Boostereo
+802,THE SCOTTS
+803,Pia Baris
+804,JRL
+805,SAYGRACE
+806,Gianni Blu
+807,Cabuizee
+808,Lil Mosey
+809,Vicetone
+810,LeXxÃ¬v
+811,BENEE
+812,Xtinctor
+813,LANDR
+814,The Prince Karma
+815,Surfaces
+816,Trevor Daniel
+817,Powfu
+818,Breakbot
+819,JACKBOYS
+820,Martin van Lectro
+821,DripReport
+822,Arizona Zervas
+823,Bag Raiders
+824,Blanco Brown
+825,Faruk Orman
+826,Jorm
+827,Ilkay Sencan
+828,Peachy!
+829,Alfons
+830,Tame Impala
+831,Sub Urban
