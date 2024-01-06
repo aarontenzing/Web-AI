@@ -11,7 +11,16 @@ mappings:
       s: ex:Artist/$(artist_id)
       po:
         - [a, ex:Artist]
-        - [ex:artist_name, $(artist_name), rdfs:literal]
+        - [ex:hasArtistName, $(artist_name), rdfs:literal]
+      
+        - p: ex:performedOn # link between artists and tracks
+          o:
+            mapping: tracks
+            condition:
+              function: equal
+              parameters:
+                - [xsd:integer, $(artist_id), s]
+                - [xsd:integer, $(artist_id), o]   
 
   tracks:
       sources:
@@ -28,7 +37,7 @@ mappings:
         - [ex:hasStreams, $(streams), xsd:unsignedLong] 
         - [ex:hasAlbumName, $(album), rdfs:literal]  
         - [ex:hasTrackPopularity, $(track_pop), xsd:integer]  
-        - [ex:duration, $(duration), xsd:dateTime] 
+        - [ex:hasDuration, $(duration), xsd:dateTime] 
 
         - p: ex:performedBy # link between artists and tracks
           o:
