@@ -1,0 +1,107 @@
+prefixes:
+  ex: http://www.semanticweb.org/music_ontology/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+
+mappings:
+
+  artists:
+      sources:
+        - ['artists.csv~csv']
+      s: ex:Artist/$(artist_id)
+      po:
+        - [a, ex:Artist]
+        - [ex:artist_name, $(artist_name), rdfs:literal]
+
+  tracks:
+      sources:
+        - ['tracks.csv~csv']
+      s: ex:Track/$(track_id)
+      po:
+        - [a, ex:Track]
+        - [ex:hasArtistId, $(artist_name), rdfs:integer]
+        - [ex:hasArtistCount, $(artist_count), xsd:integer]
+        - [ex:hasTrackName, $(track_name), rdfs:literal]
+        - [ex:hasReleaseYear, $(released_year),  xsd:integer]
+        - [ex:hasReleaseMonth, $(released_month), xsd:integer]
+        - [ex:hasReleaseDay, $(released_day), xsd:integer]
+        - [ex:hasStreams, $(streams), xsd:unsignedLong] 
+        - [ex:hasAlbumName, $(album), rdfs:literal]  
+        - [ex:hasTrackPopularity, $(track_pop), xsd:integer]  
+        - [ex:duration, $(duration), xsd:dateTime] 
+
+        - p: ex:performedBy # link between artists and tracks
+          o:
+            mapping: artists
+            condition:
+              function: equal
+              parameters:
+                - [xsd:integer, $(artist_name), s]
+                - [xsd:integer, $(artist_id), o]   
+
+        - p: ex:relatesTrackToMusicDetails # link between tracks and music
+          o:
+            mapping: music
+            condition:
+              function: equal
+              parameters:
+                - [xsd:integer, $(track_id), s]
+                - [xsd:integer, $(track_id), o]
+
+  charts:
+      sources:
+        - ['charts.csv~csv']
+      s: ex:Chart/$(chart_id)
+      po:
+        - [a, ex:Chart]
+        - [ex:containsTrackId, $(track_id), xsd:integer]
+        - [ex:rankedInSpotify, $(in_spotify_charts), xsd:integer]
+        - [ex:rankedInAppleMusic, $(in_apple_charts), xsd:integer]
+        - [ex:rankedInDeezer, $(in_deezer_charts), xsd:integer]
+        - [ex:rankedInShazam, $(in_shazam_charts), xsd:integer]
+
+        - p: ex:chartContains # link between charts and tracks
+          o:
+              mapping: tracks
+              condition:
+                function: equal
+                parameters:
+                  - [xsd:integer, $(track_id), s]
+                  - [xsd:integer, $(track_id), o]   
+  playlists:
+        sources:
+          - ['playlists.csv~csv']
+        s: ex:$(playlist_id)
+        po:
+          - [a, ex:Playlist]
+          - [ex:containsTrackId, $(track_id), xsd:integer]
+          - [ex:rankedInSpotify, $(in_spotify_playlists), xsd:integer]
+          - [ex:rankedInAppleMusic, $(in_apple_playlists), xsd:integer]
+          - [ex:rankedInDeezer, $(in_deezer_playlists), xsd:integer]
+
+          - p: ex:playlistContains # link between playlists and tracks
+            o:
+              mapping: tracks
+              condition:
+                function: equal
+                parameters:
+                  - [xsd:integer, $(track_id), s]
+                  - [xsd:integer, $(track_id), o] 
+
+  music:
+      sources:
+        - ['music.csv~csv']
+      s: ex:Music/$(music_id)
+      po:
+        - [a, ex:Music]
+        - [ex:belongsToTrackId, $(track_id), xsd:integer]
+        - [ex:hasDanceability, $(danceability), xsd:integer] 
+        - [ex:hasEnergy, $(energy), xsd:integer]   
+        - [ex:hasKey, $(key), xsd:integer] 
+        - [ex:hasMode, $(mode), rdfs:literal] 
+        - [ex:hasSpeechiness, $(speechiness), xsd:integer] 
+        - [ex:hasAcousticness, $(acousticness), xsd:integer] 
+        - [ex:hasInstrumentalness, $(instrumentalness), xsd:integer]
+        - [ex:hasLiveness, $(liveness), xsd:integer] 
+        - [ex:hasValence, $(valence), xsd:integer]
+        - [ex:hasTempo, $(tempo), xsd:integer] 
