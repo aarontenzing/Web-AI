@@ -30,7 +30,7 @@ mappings:
       po:
         - [a, ex:Track]
         - [ex:hasTrackId, $(track_id), xsd:integer]
-        - [ex:hasArtistId, $(artist_name), rdfs:integer]
+        - [ex:hasArtistId, $(artist_name), xsd:integer]
         - [ex:hasArtistCount, $(artist_count), xsd:integer]
         - [ex:hasTrackName, $(track_name), rdfs:literal]
         - [ex:hasReleaseYear, $(released_year),  xsd:integer]
