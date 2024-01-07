@@ -1,0 +1,281 @@
+@prefix : <http://www.semanticweb.org/music_ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/music_ontology/> .
+
+<http://www.semanticweb.org/music_ontology> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/music_ontology#chartContains
+:chartContains rdf:type owl:ObjectProperty ;
+               rdfs:domain :Chart ;
+               rdfs:range :Track .
+
+
+###  http://www.semanticweb.org/music_ontology#hasMusicDetails
+:hasMusicDetails rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Track ;
+                 rdfs:range :Music .
+
+
+###  http://www.semanticweb.org/music_ontology#playlistContains
+:playlistContains rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Playlist ;
+                  rdfs:range :Track .
+
+
+###  http://www.semanticweb.org/music_ontology/perfomedBy
+:perfomedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :Track ;
+            rdfs:range :Artist ;
+            rdfs:label "Links a track to the artist(s) who performed it." .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/music_ontology#belongsToTrackId
+:belongsToTrackId rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Music ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/music_ontology#containsTrackId
+:containsTrackId rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Chart ,
+                             :Playlist ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/music_ontology#hasAcousticness
+:hasAcousticness rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Music ;
+                 rdfs:range xsd:integer ;
+                 rdfs:label "The measure of how acoustic the track is as a percentage." .
+
+
+###  http://www.semanticweb.org/music_ontology#hasAlbumName
+:hasAlbumName rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Track ;
+              rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/music_ontology#hasArtistCount
+:hasArtistCount rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Track ;
+                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/music_ontology#hasArtistId
+:hasArtistId rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Artist ;
+             rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/music_ontology#hasArtistName
+:hasArtistName rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Artist ;
+               rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/music_ontology#hasDanceability
+:hasDanceability rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Music ;
+                 rdfs:range xsd:integer ;
+                 rdfs:label "The measure of how suitable a track is for dancing as a percentage." .
+
+
+###  http://www.semanticweb.org/music_ontology#hasDuration
+:hasDuration rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Track ;
+             rdfs:range xsd:dateTime ;
+             rdfs:label "The duration of the track in milliseconds." .
+
+
+###  http://www.semanticweb.org/music_ontology#hasEnergy
+:hasEnergy rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Music ;
+           rdfs:range xsd:integer ;
+           rdfs:label "The energy level of the track as a percentage." .
+
+
+###  http://www.semanticweb.org/music_ontology#hasInstrumentalness
+:hasInstrumentalness rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :Music ;
+                     rdfs:range xsd:integer ;
+                     rdfs:label "The amount of instrumental content in the track as a percentage." .
+
+
+###  http://www.semanticweb.org/music_ontology#hasKey
+:hasKey rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain :Music ;
+        rdfs:range xsd:integer ;
+        rdfs:label "Musical key of the track." .
+
+
+###  http://www.semanticweb.org/music_ontology#hasLiveness
+:hasLiveness rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Music ;
+             rdfs:range xsd:integer ;
+             rdfs:label "The presence of a live audience in the recording as a percentage." .
+
+
+###  http://www.semanticweb.org/music_ontology#hasMode
+:hasMode rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :Music ;
+         rdfs:range rdfs:Literal ;
+         rdfs:label "Musical mode of the track (major/minor)." .
+
+
+###  http://www.semanticweb.org/music_ontology#hasReleaseDay
+:hasReleaseDay rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Track ;
+               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/music_ontology#hasReleaseMonth
+:hasReleaseMonth rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Track ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/music_ontology#hasReleaseYear
+:hasReleaseYear rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Track ;
+                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/music_ontology#hasSpeechiness
+:hasSpeechiness rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Music ;
+                rdfs:range xsd:integer ;
+                rdfs:label "The presence of spoken words in the track as a percentage." .
+
+
+###  http://www.semanticweb.org/music_ontology#hasStreams
+:hasStreams rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Track ;
+            rdfs:range xsd:unsignedLong ;
+            rdfs:label "Total number of streams on Spotify" .
+
+
+###  http://www.semanticweb.org/music_ontology#hasTempo
+:hasTempo rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Music ;
+          rdfs:range xsd:integer ;
+          rdfs:label "Beats per minute of the track." .
+
+
+###  http://www.semanticweb.org/music_ontology#hasTrackId
+:hasTrackId rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Track ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/music_ontology#hasTrackName
+:hasTrackName rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Track ;
+              rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/music_ontology#hasTrackPopularity
+:hasTrackPopularity rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Track ;
+                    rdfs:range xsd:decimal ;
+                    rdfs:label "The popularity of the track." .
+
+
+###  http://www.semanticweb.org/music_ontology#hasValence
+:hasValence rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Music ;
+            rdfs:range xsd:integer ;
+            rdfs:label "The emotional positivity of the track as a percentage." .
+
+
+###  http://www.semanticweb.org/music_ontology#rankedInAppleMusic
+:rankedInAppleMusic rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Chart ,
+                                :Playlist ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/music_ontology#rankedInDeezer
+:rankedInDeezer rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Chart ,
+                            :Playlist ;
+                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/music_ontology#rankedInShazam
+:rankedInShazam rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Chart ;
+                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/music_ontology#rankedInSpotify
+:rankedInSpotify rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Chart ,
+                             :Playlist ;
+                 rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/music_ontology#Music
+:Music rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/music_ontology/Artist
+:Artist rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/music_ontology/Chart
+:Chart rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/music_ontology/Playlist
+:Playlist rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/music_ontology/Track
+:Track rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
