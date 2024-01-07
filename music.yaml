@@ -12,16 +12,7 @@ mappings:
       po:
         - [a, ex:Artist]
         - [ex:hasArtistId, $(artist_id), xsd:integer]
-        - [ex:hasArtistName, $(artist_name), rdfs:literal]
-      
-        - p: ex:performedOn # link between artists and tracks
-          o:
-            mapping: tracks
-            condition:
-              function: equal
-              parameters:
-                - [xsd:integer, $(artist_id), s]
-                - [xsd:integer, $(artist_id), o]   
+        - [ex:hasArtistName, $(artist_name), rdfs:literal] 
 
   tracks:
       sources:
