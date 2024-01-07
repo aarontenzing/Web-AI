@@ -98,7 +98,7 @@ def create_music_table(data):
     music = data.loc[:, ('track_id','danceability', 'energy', 'key', 'mode', 'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo')]
     music_id = [idx for idx, _ in enumerate(music.loc[:, ('track_id')])]
     music.insert(0, 'music_id', music_id)
-    music.fillna(-1, inplace=True)
+    music.fillna(-1, inplace=True) # NaN naar -1
     music = music.astype(int, errors='ignore') # .0 removen met
     music['mode'] = music['mode'].replace({0: "major", 1: "minor"}) # 0 naar False en 1 naar True mode
     music.to_csv('music.csv',index=False) # write music to csv

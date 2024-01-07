@@ -1,0 +1,585 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix map: <http://mapping.example.com/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix ex: <http://www.semanticweb.org/music_ontology/> .
+
+map:jc_000 rr:child "artist_name" ;
+	rr:parent "artist_id" .
+
+map:jc_001 rr:child "track_id" ;
+	rr:parent "track_id" .
+
+map:jc_002 rr:child "track_id" ;
+	rr:parent "track_id" .
+
+map:jc_003 rr:child "track_id" ;
+	rr:parent "track_id" .
+
+map:map_artists_000 rml:logicalSource map:source_000 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "artists" ;
+	rr:predicateObjectMap map:pom_000, map:pom_001, map:pom_002 ;
+	rr:subjectMap map:s_000 .
+
+map:map_charts_000 rml:logicalSource map:source_002 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "charts" ;
+	rr:predicateObjectMap map:pom_017, map:pom_018, map:pom_019, map:pom_020, map:pom_021, map:pom_022, map:pom_023 ;
+	rr:subjectMap map:s_002 .
+
+map:map_music_000 rml:logicalSource map:source_004 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "music" ;
+	rr:predicateObjectMap map:pom_030, map:pom_031, map:pom_032, map:pom_033, map:pom_034, map:pom_035, map:pom_036, map:pom_037, map:pom_038, map:pom_039, map:pom_040, map:pom_041 ;
+	rr:subjectMap map:s_004 .
+
+map:map_playlists_000 rml:logicalSource map:source_003 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "playlists" ;
+	rr:predicateObjectMap map:pom_024, map:pom_025, map:pom_026, map:pom_027, map:pom_028, map:pom_029 ;
+	rr:subjectMap map:s_003 .
+
+map:map_tracks_000 rml:logicalSource map:source_001 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "tracks" ;
+	rr:predicateObjectMap map:pom_003, map:pom_004, map:pom_005, map:pom_006, map:pom_007, map:pom_008, map:pom_009, map:pom_010, map:pom_011, map:pom_012, map:pom_013, map:pom_014, map:pom_015, map:pom_016 ;
+	rr:subjectMap map:s_001 .
+
+map:om_000 rdf:type rr:ObjectMap ;
+	rr:constant ex:Artist ;
+	rr:termType rr:IRI .
+
+map:om_001 rml:reference "artist_id" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_002 rml:reference "artist_name" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype rdfs:literal ;
+	rr:termType rr:Literal .
+
+map:om_003 rdf:type rr:ObjectMap ;
+	rr:constant ex:Track ;
+	rr:termType rr:IRI .
+
+map:om_004 rml:reference "track_id" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_005 rml:reference "artist_name" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_006 rml:reference "artist_count" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_007 rml:reference "track_name" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype rdfs:literal ;
+	rr:termType rr:Literal .
+
+map:om_008 rml:reference "released_year" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_009 rml:reference "released_month" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_010 rml:reference "released_day" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_011 rml:reference "streams" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:unsignedLong ;
+	rr:termType rr:Literal .
+
+map:om_012 rml:reference "album" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype rdfs:literal ;
+	rr:termType rr:Literal .
+
+map:om_013 rml:reference "track_pop" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:decimal ;
+	rr:termType rr:Literal .
+
+map:om_014 rml:reference "duration" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:dateTime ;
+	rr:termType rr:Literal .
+
+map:om_015 rdf:type rr:ObjectMap ;
+	rr:constant ex:Chart ;
+	rr:termType rr:IRI .
+
+map:om_016 rml:reference "track_id" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_017 rml:reference "in_spotify_charts" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_018 rml:reference "in_apple_charts" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_019 rml:reference "in_deezer_charts" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_020 rml:reference "in_shazam_charts" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_021 rdf:type rr:ObjectMap ;
+	rr:constant ex:Playlist ;
+	rr:termType rr:IRI .
+
+map:om_022 rml:reference "track_id" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_023 rml:reference "in_spotify_playlists" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_024 rml:reference "in_apple_playlists" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_025 rml:reference "in_deezer_playlists" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_026 rdf:type rr:ObjectMap ;
+	rr:constant ex:Music ;
+	rr:termType rr:IRI .
+
+map:om_027 rml:reference "track_id" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_028 rml:reference "danceability" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_029 rml:reference "energy" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_030 rml:reference "key" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_031 rml:reference "mode" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype rdfs:literal ;
+	rr:termType rr:Literal .
+
+map:om_032 rml:reference "speechiness" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_033 rml:reference "acousticness" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_034 rml:reference "instrumentalness" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_035 rml:reference "liveness" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_036 rml:reference "valence" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_037 rml:reference "tempo" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_038 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_000 ;
+	rr:parentTriplesMap map:map_artists_000 .
+
+map:om_039 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_001 ;
+	rr:parentTriplesMap map:map_music_000 .
+
+map:om_040 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_002 ;
+	rr:parentTriplesMap map:map_tracks_000 .
+
+map:om_041 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_003 ;
+	rr:parentTriplesMap map:map_tracks_000 .
+
+map:pm_000 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_001 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasArtistId .
+
+map:pm_002 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasArtistName .
+
+map:pm_003 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_004 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasTrackId .
+
+map:pm_005 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasArtistId .
+
+map:pm_006 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasArtistCount .
+
+map:pm_007 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasTrackName .
+
+map:pm_008 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasReleaseYear .
+
+map:pm_009 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasReleaseMonth .
+
+map:pm_010 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasReleaseDay .
+
+map:pm_011 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasStreams .
+
+map:pm_012 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasAlbumName .
+
+map:pm_013 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasTrackPopularity .
+
+map:pm_014 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasDuration .
+
+map:pm_015 rdf:type rr:PredicateMap ;
+	rr:constant ex:performedBy .
+
+map:pm_016 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasMusicDetails .
+
+map:pm_017 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_018 rdf:type rr:PredicateMap ;
+	rr:constant ex:containsTrackId .
+
+map:pm_019 rdf:type rr:PredicateMap ;
+	rr:constant ex:rankedInSpotify .
+
+map:pm_020 rdf:type rr:PredicateMap ;
+	rr:constant ex:rankedInAppleMusic .
+
+map:pm_021 rdf:type rr:PredicateMap ;
+	rr:constant ex:rankedInDeezer .
+
+map:pm_022 rdf:type rr:PredicateMap ;
+	rr:constant ex:rankedInShazam .
+
+map:pm_023 rdf:type rr:PredicateMap ;
+	rr:constant ex:chartContains .
+
+map:pm_024 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_025 rdf:type rr:PredicateMap ;
+	rr:constant ex:containsTrackId .
+
+map:pm_026 rdf:type rr:PredicateMap ;
+	rr:constant ex:rankedInSpotify .
+
+map:pm_027 rdf:type rr:PredicateMap ;
+	rr:constant ex:rankedInAppleMusic .
+
+map:pm_028 rdf:type rr:PredicateMap ;
+	rr:constant ex:rankedInDeezer .
+
+map:pm_029 rdf:type rr:PredicateMap ;
+	rr:constant ex:playlistContains .
+
+map:pm_030 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_031 rdf:type rr:PredicateMap ;
+	rr:constant ex:belongsToTrackId .
+
+map:pm_032 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasDanceability .
+
+map:pm_033 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasEnergy .
+
+map:pm_034 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasKey .
+
+map:pm_035 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasMode .
+
+map:pm_036 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasSpeechiness .
+
+map:pm_037 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasAcousticness .
+
+map:pm_038 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasInstrumentalness .
+
+map:pm_039 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasLiveness .
+
+map:pm_040 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasValence .
+
+map:pm_041 rdf:type rr:PredicateMap ;
+	rr:constant ex:hasTempo .
+
+map:pom_000 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_000 ;
+	rr:predicateMap map:pm_000 .
+
+map:pom_001 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_001 ;
+	rr:predicateMap map:pm_001 .
+
+map:pom_002 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_002 ;
+	rr:predicateMap map:pm_002 .
+
+map:pom_003 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_003 ;
+	rr:predicateMap map:pm_003 .
+
+map:pom_004 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_004 ;
+	rr:predicateMap map:pm_004 .
+
+map:pom_005 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_005 ;
+	rr:predicateMap map:pm_005 .
+
+map:pom_006 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_006 ;
+	rr:predicateMap map:pm_006 .
+
+map:pom_007 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_007 ;
+	rr:predicateMap map:pm_007 .
+
+map:pom_008 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_008 ;
+	rr:predicateMap map:pm_008 .
+
+map:pom_009 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_009 ;
+	rr:predicateMap map:pm_009 .
+
+map:pom_010 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_010 ;
+	rr:predicateMap map:pm_010 .
+
+map:pom_011 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_011 ;
+	rr:predicateMap map:pm_011 .
+
+map:pom_012 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_012 ;
+	rr:predicateMap map:pm_012 .
+
+map:pom_013 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_013 ;
+	rr:predicateMap map:pm_013 .
+
+map:pom_014 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_014 ;
+	rr:predicateMap map:pm_014 .
+
+map:pom_015 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_038 ;
+	rr:predicateMap map:pm_015 .
+
+map:pom_016 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_039 ;
+	rr:predicateMap map:pm_016 .
+
+map:pom_017 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_015 ;
+	rr:predicateMap map:pm_017 .
+
+map:pom_018 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_016 ;
+	rr:predicateMap map:pm_018 .
+
+map:pom_019 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_017 ;
+	rr:predicateMap map:pm_019 .
+
+map:pom_020 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_018 ;
+	rr:predicateMap map:pm_020 .
+
+map:pom_021 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_019 ;
+	rr:predicateMap map:pm_021 .
+
+map:pom_022 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_020 ;
+	rr:predicateMap map:pm_022 .
+
+map:pom_023 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_040 ;
+	rr:predicateMap map:pm_023 .
+
+map:pom_024 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_021 ;
+	rr:predicateMap map:pm_024 .
+
+map:pom_025 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_022 ;
+	rr:predicateMap map:pm_025 .
+
+map:pom_026 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_023 ;
+	rr:predicateMap map:pm_026 .
+
+map:pom_027 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_024 ;
+	rr:predicateMap map:pm_027 .
+
+map:pom_028 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_025 ;
+	rr:predicateMap map:pm_028 .
+
+map:pom_029 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_041 ;
+	rr:predicateMap map:pm_029 .
+
+map:pom_030 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_026 ;
+	rr:predicateMap map:pm_030 .
+
+map:pom_031 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_027 ;
+	rr:predicateMap map:pm_031 .
+
+map:pom_032 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_028 ;
+	rr:predicateMap map:pm_032 .
+
+map:pom_033 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_029 ;
+	rr:predicateMap map:pm_033 .
+
+map:pom_034 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_030 ;
+	rr:predicateMap map:pm_034 .
+
+map:pom_035 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_031 ;
+	rr:predicateMap map:pm_035 .
+
+map:pom_036 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_032 ;
+	rr:predicateMap map:pm_036 .
+
+map:pom_037 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_033 ;
+	rr:predicateMap map:pm_037 .
+
+map:pom_038 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_034 ;
+	rr:predicateMap map:pm_038 .
+
+map:pom_039 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_035 ;
+	rr:predicateMap map:pm_039 .
+
+map:pom_040 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_036 ;
+	rr:predicateMap map:pm_040 .
+
+map:pom_041 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_037 ;
+	rr:predicateMap map:pm_041 .
+
+map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_artists_000, map:map_charts_000, map:map_music_000, map:map_playlists_000, map:map_tracks_000 ;
+	rdf:type <http://rdfs.org/ns/void#Dataset> .
+
+map:s_000 rdf:type rr:SubjectMap ;
+	rr:template "http://www.semanticweb.org/music_ontology/Artist/{artist_id}" .
+
+map:s_001 rdf:type rr:SubjectMap ;
+	rr:template "http://www.semanticweb.org/music_ontology/Track/{track_id}" .
+
+map:s_002 rdf:type rr:SubjectMap ;
+	rr:template "http://www.semanticweb.org/music_ontology/Chart/{chart_id}" .
+
+map:s_003 rdf:type rr:SubjectMap ;
+	rr:template "http://www.semanticweb.org/music_ontology/Playlist/{playlist_id}" .
+
+map:s_004 rdf:type rr:SubjectMap ;
+	rr:template "http://www.semanticweb.org/music_ontology/Music/{music_id}" .
+
+map:source_000 rml:referenceFormulation ql:CSV ;
+	rml:source "artists.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_001 rml:referenceFormulation ql:CSV ;
+	rml:source "tracks.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_002 rml:referenceFormulation ql:CSV ;
+	rml:source "charts.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_003 rml:referenceFormulation ql:CSV ;
+	rml:source "playlists.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_004 rml:referenceFormulation ql:CSV ;
+	rml:source "music.csv" ;
+	rdf:type rml:LogicalSource .
+
