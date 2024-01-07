@@ -1,0 +1,202 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://www.semanticweb.org/music_ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:ArtistShape
+  a sh:NodeShape ;
+  sh:targetClass ex:Artist ;
+  sh:property [
+    sh:path ex:hasArtistId ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path ex:hasArtistName ;
+    sh:datatype rdfs:literal ;
+  ] .
+
+ex:TrackShape
+  a sh:NodeShape ;
+  sh:targetClass ex:Track ;
+  sh:property [
+    sh:path ex:hasTrackId ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path ex:hasArtistId ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path ex:hasArtistCount ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:hasTrackName ;
+    sh:datatype rdfs:literal ;
+  ] ;
+  sh:property [
+    sh:path ex:hasReleaseYear ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path ex:hasReleaseMonth ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 1 ;
+    sh:maxInclusive 12 ;
+  ] ;
+  sh:property [
+    sh:path ex:hasReleaseDay ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 1 ;
+    sh:maxInclusive 31 ;
+  ] ;
+  sh:property [
+    sh:path ex:hasStreams ;
+    sh:datatype xsd:unsignedLong ;
+  ] ;
+  sh:hasAlbumName [
+    sh:path ex:hasAlbumName ;
+    sh:datatype rdfs:literal ;
+  ] ;
+  sh:property [
+    sh:path ex:hasTrackPopularity ;
+    sh:datatype xsd:decimal ;
+    sh:minInclusive -1 ;
+  ] ;
+  sh:property [
+    sh:path ex:hasDuration ;
+    sh:datatype xsd:dateTime ;
+  ] ;
+  sh:property [
+    sh:path ex:performedBy ;
+    sh:class ex:Artist ;
+  ] ;
+  sh:property [
+    sh:path ex:hasMusicDetails ;
+    sh:class ex:Music ;
+  ] .
+
+ex:ChartShape
+  a sh:NodeShape ;
+  sh:targetClass ex:Chart ;
+  sh:property [
+    sh:path ex:containsTrackId ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+  ] ;
+  sh:property [
+    sh:path ex:rankedInSpotify ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+  ] ;
+  sh:property [
+    sh:path ex:rankedInAppleMusic ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+  ] ;
+  sh:property [
+    sh:path ex:rankedInDeezer ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+  ] ;
+  sh:property [
+    sh:path ex:chartContains ;
+    sh:class ex:Track ;
+    sh:minCount 0 ;
+  ] .
+
+ex:PlaylistShape
+  a sh:NodeShape ;
+  sh:targetClass ex:Playlist ;
+  sh:property [
+    sh:path ex:containsTrackId ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:rankedInSpotify ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:rankedInAppleMusic ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:rankedInDeezer ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:playlistContains ;
+    sh:class ex:Track ;
+    sh:minCount 1 ;
+  ] .
+
+ex:MusicShape
+  a sh:NodeShape ;
+  sh:targetClass ex:Music ;
+  sh:property [
+    sh:path ex:belongsToTrackId ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path ex:hasDanceability ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+    sh:maxInclusive 100 ;
+  ] ;
+  sh:property [
+    sh:path ex:hasEnergy ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+    sh:maxInclusive 100 ;
+  ] ;
+  sh:property [
+    sh:path ex:hasKey ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive -1 ;
+    sh:maxInclusive 11 ;
+  ] ;
+  sh:property [
+    sh:path ex:hasMode ;   
+    sh:datatype rdfs:literal ;
+    sh:pattern "^(major|minor)$" ;
+  ] ;
+  sh:property [
+    sh:path ex:hasSpeechiness ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+    sh:maxInclusive 100 ;
+  ] ;
+  sh:property [
+    sh:path ex:hasAcousticness ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+    sh:maxInclusive 100 ;
+  ] ;
+  sh:property [
+    sh:path ex:hasInstrumentalness ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+    sh:maxInclusive 100 ;
+  ] ;
+  sh:property [
+    sh:path ex:hasLiveness ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+    sh:maxInclusive 100 ;
+  ] ;
+  sh:property [
+    sh:path ex:hasValence ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+    sh:maxInclusive 100 ;
+  ] ;
+  sh:property [
+    sh:path ex:hasTempo ;
+    sh:datatype xsd:integer ;
+  ] .

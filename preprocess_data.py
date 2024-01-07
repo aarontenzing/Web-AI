@@ -113,6 +113,17 @@ if __name__ == "__main__":
     merged = pd.concat([df_spotify, df_tiktok], ignore_index=True)
     merged['artist_name'] = merged['artist_name'].str.split(', ')
     
+    merged['artist_count'] = merged['artist_count'].fillna(1) # fix artist count 1 not in chart
+    
+    merged['artist_pop'] = merged['artist_pop'].fillna(-1) # fix artist pop -1 not in chart
+    
+    merged['track_pop'] = merged['track_pop'].fillna(-1) # fix track pop -1 not in chart
+    
+    merged['duration'] = merged['duration'].fillna(0) # fix duration 0 not in chart
+    
+    merged['released_year'] = merged['released_year'].fillna(0) # fix released year 0 not in chart
+    merged['released_month'] = merged['released_month'].fillna(0) # fix released month 0 not in chart
+    merged['released_day'] = merged['released_day'].fillna(0) # fix released day 0 not in chart
     # Create artist table
     artist_table = create_artist_table(merged)
         
