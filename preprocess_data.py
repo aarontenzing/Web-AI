@@ -19,7 +19,6 @@ def preprocess_spotify():
 
     # change Major to 0 and Minor to 1
     df['mode'] = df['mode'].map({'Major': 0, 'Minor': 1})
-    print(df['mode'])
 
     # change musical key to 0-11 range
     key_mapping = {
@@ -27,6 +26,11 @@ def preprocess_spotify():
         'F#': 6, 'G': 7, 'G#': 8, 'A': 9, 'A#': 10, 'B': 11
     }
     df['key'] = df['key'].map(key_mapping)
+    
+    df['released_year'] = df['released_year'].astype(str)
+    df['released_month'] = df['released_month'].astype(str)
+    df['released_day'] = df['released_day'].astype(str)
+    df['artist_count'] = df['artist_count'].astype(str)
 
     return df
  
@@ -41,13 +45,12 @@ def preprocess_tiktok():
         'liveness', 
         'valence'
     ]
-    print(df['instrumentalness'])
+    
     df[columns_to_multiply] = df[columns_to_multiply].mul(100).round(1)
     df = df.rename(columns={"duration_ms":"duration"})
     df.astype({'duration': 'float64'}).dtypes
     df['duration'] = df['duration'].div(1000)
     df['duration'] = pd.to_datetime(df['duration'], unit='s').dt.strftime('%M:%S')
-    print(df['duration'])
 
     return df
   
@@ -77,6 +80,7 @@ def create_chart_table(data):
     sort_chart = chart.sort_values(by=['in_spotify_charts', 'in_apple_charts', 'in_deezer_charts', 'in_shazam_charts'], ascending=False)
     chart_id = [idx for idx, _ in enumerate(chart.loc[:, ('track_id')])]
     sort_chart.insert(0, 'chart_id', chart_id)
+    sort_chart[['in_spotify_charts', 'in_apple_charts', 'in_deezer_charts', 'in_shazam_charts']] = sort_chart[['in_spotify_charts', 'in_apple_charts', 'in_deezer_charts', 'in_shazam_charts']].astype(int)
     sort_chart.to_csv('charts.csv',index=False) # write charts to csv
     
 def create_playlist_table(data):

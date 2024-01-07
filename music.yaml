@@ -11,6 +11,7 @@ mappings:
       s: ex:Artist/$(artist_id)
       po:
         - [a, ex:Artist]
+        - [ex:hasArtistId, $(artist_id), xsd:integer]
         - [ex:hasArtistName, $(artist_name), rdfs:literal]
       
         - p: ex:performedOn # link between artists and tracks
@@ -28,6 +29,7 @@ mappings:
       s: ex:Track/$(track_id)
       po:
         - [a, ex:Track]
+        - [ex:hasTrackId, $(track_id), xsd:integer]
         - [ex:hasArtistId, $(artist_name), rdfs:integer]
         - [ex:hasArtistCount, $(artist_count), xsd:integer]
         - [ex:hasTrackName, $(track_name), rdfs:literal]
@@ -36,7 +38,7 @@ mappings:
         - [ex:hasReleaseDay, $(released_day), xsd:integer]
         - [ex:hasStreams, $(streams), xsd:unsignedLong] 
         - [ex:hasAlbumName, $(album), rdfs:literal]  
-        - [ex:hasTrackPopularity, $(track_pop), xsd:integer]  
+        - [ex:hasTrackPopularity, $(track_pop), xsd:decimal]  
         - [ex:hasDuration, $(duration), xsd:dateTime] 
 
         - p: ex:performedBy # link between artists and tracks
@@ -48,7 +50,7 @@ mappings:
                 - [xsd:integer, $(artist_name), s]
                 - [xsd:integer, $(artist_id), o]   
 
-        - p: ex:relatesTrackToMusicDetails # link between tracks and music
+        - p: ex:hasMusicDetails # link between tracks and music
           o:
             mapping: music
             condition:
@@ -80,7 +82,7 @@ mappings:
   playlists:
         sources:
           - ['playlists.csv~csv']
-        s: ex:$(playlist_id)
+        s: ex:Playlist/$(playlist_id)
         po:
           - [a, ex:Playlist]
           - [ex:containsTrackId, $(track_id), xsd:integer]
