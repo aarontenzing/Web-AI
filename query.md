@@ -4,7 +4,7 @@ PREFIX music: <http://www.semanticweb.org/music_ontology/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?track ?name ?trackname ?streams
+SELECT DISTINCT ?track ?name ?trackname ?streams ?mode
 WHERE {
     ?artist rdf:type music:Artist .
     ?track rdf:type music:Track .
@@ -13,8 +13,8 @@ WHERE {
     ?track music:performedBy ?artist . 
     ?track music:hasTrackName ?trackname .
     ?track music:hasStreams ?streams .
-    ?track music:relatesTrackToMusicDetails ?details .
-    ?detail music:hasMode ?mode
+    ?track music:hasMusicDetails ?details .
+    ?details music:hasMode ?mode
 }
 ORDER BY ASC(?streams) 
 ```
