@@ -6,15 +6,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?track ?name ?trackname ?streams ?mode
 WHERE {
-    ?artist rdf:type music:Artist .
-    ?track rdf:type music:Track .
-    ?artist music:hasArtistName ?name .
-    filter (STR(?name) = "Taylor Swift") 
-    ?track music:performedBy ?artist . 
-    ?track music:hasTrackName ?trackname .
-    ?track music:hasStreams ?streams .
-    ?track music:hasMusicDetails ?details .
-    ?details music:hasMode ?mode
+    ?artist rdf:type music:Artist ;
+    	music:hasArtistName ?name ;
+    FILTER (STR(?name) = "Taylor Swift")    
+    
+    ?track rdf:type music:Track ;
+    	music:performedBy ?artist ;
+    	music:hasTrackName ?trackname ;
+    	music:hasStreams ?streams ;
+    	music:hasMusicDetails ?details .
+    
+    ?details music:hasMode ?mode . 
 }
 ORDER BY ASC(?streams) 
 ```
@@ -26,9 +28,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?name (COUNT(?track) AS ?total_tracks) 
 WHERE {
-    ?artist rdf:type music:Artist .
+    ?artist rdf:type music:Artist ;
+    	music:hasArtistName ?name .
     ?track music:performedBy ?artist .
-    ?artist music:hasArtistName ?name 
+    
 }
 GROUP BY ?name
 ORDER BY DESC(?total_tracks)
@@ -42,12 +45,13 @@ PREFIX ex: <http://www.semanticweb.org/music_ontology/>
 
 SELECT DISTINCT (?rank as ?spotify_chart_rank) ?track_name ?artist_name
 WHERE {
-    ?chart rdf:type music:Chart .
-    ?chart ex:rankedInSpotify ?rank .
+    ?chart rdf:type music:Chart ;
+    	ex:rankedInSpotify ?rank .
     filter(?rank != 0 && ?rank <= 3)
+    
     ?chart ex:chartContains ?track .
-    ?track ex:hasTrackName ?track_name .
-    ?track ex:performedBy ?artist .
+    ?track ex:hasTrackName ?track_name ;
+    	ex:performedBy ?artist .
     ?artist ex:hasArtistName ?artist_name .
 }
 ```
