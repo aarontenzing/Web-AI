@@ -1,4 +1,4 @@
-1) Find songs from a specific artist and order them by ascending streams.
+1) Find songs with some details, filtered on a specific artist name and order them by ascending streams.
 ```
 PREFIX music: <http://www.semanticweb.org/music_ontology/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -50,4 +50,27 @@ WHERE {
     ?track ex:performedBy ?artist .
     ?artist ex:hasArtistName ?artist_name .
 }
+```
+4) Here I retrieve all the songs made by Justing Bieber ordered by the released year.
+```
+PREFIX ex: <http://www.semanticweb.org/music_ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?track ?trackName ?releaseYear ?streams ?albumName
+WHERE {
+  ?track rdf:type ex:Track ;
+         ex:hasArtistId ?artistId ;
+         ex:hasTrackName ?trackName ;
+         ex:hasReleaseYear ?releaseYear ;
+         ex:hasStreams ?streams ;
+         ex:hasAlbumName ?albumName ;
+         ex:performedBy ?artist .
+    FILTER(?releaseYear != 0)
+
+  ?artist rdf:type ex:Artist ;
+          ex:hasArtistName "Justin Bieber"^^rdfs:literal .
+}
+ORDER BY ?releaseYear
 ```
